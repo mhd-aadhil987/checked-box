@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checked Box</title>
+</head>
+<body>
+    <input type="checkbox" name="" id="checkbox"> Subscribe  
+        <br><br>
+    <input type="radio" name="payment" id="visa"> Visa  <br>
+    <input type="radio" name="payment" id="master"> Master   <br>
+    <input type="radio" name="payment" id="paypal"> PayPal  <br><br>
+
+    <button onclick="display()">Submit</button>
+
+    <p id="output-1"></p>
+    <p id="output-2"></p>
+
+    <script>
+            let check = document.getElementById('checkbox');
+            let visa = document.getElementById('visa');
+            let master = document.getElementById('master');
+            let paypal = document.getElementById('paypal');
+            let out = document.getElementById('output-1');
+            let output = document.getElementById('output-2');
+
+            function display(){
+                if(check.checked){
+                    out.textContent = "You are subscribed.";
+                }
+                else{
+                    out.textContent = "You are not subscribed.";
+                }
+
+                if(visa.checked){
+                    output.textContent = "You have selected Visa.";
+
+                }
+                else if(master.checked){
+                    output.textContent = "You have selected Master.";
+
+                }
+                else if(paypal.checked){
+                    output.textContent = "You have selected PayPal.";
+
+                }
+                else{
+                    output.textContent = "You have not selected any payment metod.";
+                }
+                
+            }
+
+
+
+    </script>
+</body>
+</html>
